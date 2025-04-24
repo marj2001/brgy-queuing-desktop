@@ -1,0 +1,15 @@
+# Node modules (malaki ito, di kailangan i-upload)
+node_modules/
+
+# Build outputs
+dist/
+out/
+
+# Electron build exe file (para safe, kahit saan pa ito manggaling)
+*.exe
+
+# OS-specific files
+.DS_Store
+
+# Env files (sensitive data)
+.env
