@@ -1,0 +1,195 @@
+
+.userlist-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.userlist-controls {
+    margin-bottom: 20px;
+}
+
+.userlist-controls input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 50%; 
+    max-width: 400px; 
+}
+
+.userlist-content {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.userlist-box {
+    width: 100%;
+}
+
+.userlist-row-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    padding: 2px 3px;
+    background-color: #007bff;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.userlist-label {
+    flex: 1;
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.userlist-label2 {
+    flex: 1;
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+    margin-left: 100px;
+}
+
+.scrollable-userlist {
+    max-height: 350px;
+    overflow-y: auto; 
+    border: 1px solid #ccc; 
+    background-color: #f8f9fa;
+}
+
+#userTableBody .userlist-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 1px 5px;
+    background-color: #f8dcdc;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.userlist-item {
+    flex: 1;
+    text-align: left;
+    padding: 7px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+
+.userlist-label1 {
+    flex: 1;
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+    margin-left: 40px;
+}
+
+.userlist-label0 {
+    flex: 1;
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+    margin-left: 90px;
+}
+
+
+
+
+#userTableBody .userlist-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 1px 5px;
+    background-color: #f8dcdc;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.userlist-item {
+    flex: 1;
+    text-align: left;
+    padding: 7px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    display: flex;
+    align-items: center; 
+}
+
+button.edit-button, button.view-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px; 
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px; 
+}
+
+button.view-button {
+    background-color: #892edf;
+}
+
+button.edit-button:hover {
+    background-color: #0056b3;
+}
+
+button.view-button:hover {
+    background-color: #22155a;
+    transition: background-color 0.3s;
+}
+
+
+@media (max-width: 768px) {
+    .edit-button, .view-button {
+        padding: 8px 12px; 
+        font-size: 12px; 
+    }
+
+    .userlist-row {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    .userlist-item {
+        width: 100%; 
+        margin-bottom: 10px;
+    }
+
+    .edit-button, .view-button {
+        display: inline-flex;
+        margin-right: 10px; 
+    }
+}
+
+
+@media (min-width: 769px) {
+    .userlist-content {
+        flex-direction: row;
+        align-items: center; 
+    }
+
+    button.edit-button, button.view-button {
+        padding: 10px 20px; 
+        font-size: 14px;
+    }
+    
+    .userlist-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+    }
+
+    .userlist-item button {
+        display: inline-flex;
+        margin-right: 10px; 
+    }
+}

@@ -1,0 +1,79 @@
+.profile-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+h2{
+
+    color: #3498db ;
+}
+/* Container for profile picture and the "Change profile picture" link */
+.profile-picture-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #3498db;
+    margin-bottom: 10px; /* Space between picture and the text */
+}
+
+.change-picture-text {
+    color: #3498db;
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.change-picture-text:hover {
+    color: #2980b9;
+}
+
+.profile-details {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.profile-info h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #2d3436;
+}
+
+.profile-info p {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin: 5px 0;
+}
+
+.profile-actions {
+    margin-top: 30px;
+}
+
+.btn-edit-profile, .btn-change-password {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit-profile:hover, .btn-change-password:hover {
+    background-color: #2980b9;
+}
+

@@ -1,0 +1,219 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Kreon', serif;
+  background-color: #f7f7f7;
+  background-image: url("../pictures/bo.png"); /* Background image */
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  height: 100vh;
+  padding-top: 50px; 
+}
+
+.header-title {
+  font-size: 2.5rem; 
+  margin-bottom: 20px;
+  color: #030608;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.signup-form-container {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for better blending */
+  padding: 40px; /* Increased padding for a spacious feel */
+  border-radius: 12px; /* More rounded corners for a modern look */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Softer and deeper shadow */
+  width: 90%;
+  max-width: 800px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px; /* Reduced margin for better spacing */
+  color: #333; /* Darker title color for contrast */
+  font-size: 2rem; /* Increased font size for prominence */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  gap: 20px; 
+  margin-bottom: 20px; /* Increased margin for better separation */
+}
+
+.column {
+  flex: 1;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block; 
+}
+
+.position {
+   margin-top: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px; /* Increased padding for comfort */
+  border: 1px solid #ccc; /* Border for a cleaner look */
+  border-radius: 8px; /* Rounded corners */
+  outline: none;
+  transition: border-color 0.3s;
+  box-sizing: border-box; 
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border: 1px solid #3498db; /* Focused border color */
+}
+
+.show-password {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.show-password input {
+  margin-right: 10px;
+}
+
+button {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px; /* More rounded corners */
+  background-color: #3498db; /* Primary button color */
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #2980b9; /* Darker on hover */
+}
+
+.fingerprint-section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fingerprint-section button {
+  background-color: #2ecc71; /* Success color for fingerprint scan */
+}
+
+.fingerprint-section button:hover {
+  background-color: #27ae60; /* Darker on hover */
+}
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    gap: 10px; 
+  }
+}
+
+.login {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login a {
+  text-decoration: underline;
+  color: #3498db; /* Consistent color for links */
+}
+
+.login hr {
+  margin-top: 10px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border: none; 
+  height: 1px; 
+  background-color: #ccc;
+}
+
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 400px; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.error {
+    color: red; 
+    display: none; 
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+#username-error-message {
+  position: absolute;
+  right: 10px; 
+  top: 50%; 
+  margin-top: 10px;
+  transform: translateY(-50%);
+  color: red;
+  font-size: 0.9rem;
+  display: none; 
+}
+
+.show-error #username-error-message {
+  display: block; 
+}
+
+
+input[type="text"] {
+  padding-right: 100px; 
+}
+

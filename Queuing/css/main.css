@@ -1,0 +1,193 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kreon:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("../pictures/bo.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    max-width: 1200px;
+    background: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color:transparent;
+}
+
+.left h1 {
+    font-size: 4.2vw;
+    font-family: 'Kreon', serif;
+    color: #333;
+    margin: 10px 0;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 8px 14px 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h1 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.input-group img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.show-password-checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.show-password-checkbox input {
+    margin-right: 5px;
+}
+
+#message-box {
+    display: none;
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.fingerprint-group {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.fingerprint-group img {
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.admin-login {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.admin-login a {
+    color: #30aa23;
+    text-decoration: none;
+}
+
+.admin-login a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #cec1c1;
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        padding: 20px;
+    }
+
+    .login-form {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .left h1 {
+        font-size: 5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .left h1 {
+        font-size: 6vw;
+    }
+
+    input[type="text"], input[type="password"] {
+        padding: 8px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
