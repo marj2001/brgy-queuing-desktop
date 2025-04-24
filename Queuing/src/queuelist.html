@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barangay Queuing Queue List</title>
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/sidebar.css"> 
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/profi.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/queuelist.css">
+
+ 
+ </head>
+ <body>
+
+    <section id="sidebar">
+        <a href="#" class="brand">
+            <img src="../pictures/san.png" alt="Logo" class="brand-logo">
+            <div class="admin" id="username-display">Admin</div>
+          </a>
+        <ul class="side-menu top">
+            <li>
+                <a href="dashboard.html">
+                    <i class='bx bxs-dashboard'></i>
+                    <span class="text">Dashboard</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="queuelist.html">
+                    <i class='bx bx-list-check'></i>
+                    <span class="text">Queue List</span>
+                </a>
+            </li>
+            <li>
+                <a href="../src/userlist.html">
+                    <i class='bx bxs-user-detail'></i>
+                    <span class="text">User List</span>
+                </a>
+            </li>
+            <li>
+                <a href="../src/history.html">
+                    <i class='bx bx-history'></i>
+                    <span class="text">History</span>
+                </a>
+            </li>
+            <li>
+                <a href="../src/announce.html">
+                    <i class='bx bx-news'></i>
+                    <span class="text">Announcement</span>
+                </a>
+            </li>
+            <li>
+                <a href="../src/reports.html">
+                    <i class='bx bx-bar-chart-alt'></i>
+                    <span class="text">Reports</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="side-menu">
+            <li>
+                <a href="../src/index.html" class="logout">
+                    <i class='bx bxs-log-out-circle'></i>
+                    <span class="text">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="content">
+        <nav>
+            <i class='bx bx-menu'></i>
+
+            <div class="navbar-title">
+                Barangay San Jose Queuing System
+             </div>
+
+            <div class="user_profile">
+                <div class="avatar" id="sidebar-avatar" style="background-image: url('');"></div>
+                <div class="profile-dropdown">
+                    <a href="../src/myprofile.html" class="my_profile">My Profile</a>
+                </div>
+              </div>
+        </nav>
+
+        
+        <main>
+            <div class="head-title">
+                <h1>Queue List</h1>
+            </div>
+
+            
+            <div class="queue-wrapper">
+                <div class="queue-controls">
+                    <select id="filterDocument" onchange="filterQueue()">
+                        <option value="">All Documents</option>
+                        <option value="Barangay ID">Barangay ID</option>
+                        <option value="Barangay Clearance">Barangay Clearance</option>
+                        <option value="Barangay Indigency">Barangay Indigency</option>
+                        <option value="Barangay Certificate">Barangay Certificate</option>
+                    </select>
+                </div>
+            
+                <div class="queue-container">
+
+                    
+                    <!-- Current Queue Section -->
+                    <div class="current-queue">
+                        <h2 class="current-queue-title">Current Queue</h2>
+                        <div id="currentQueueNumber" class="queue-number">0</div>
+                        <div class="queue-actions">
+                            <button class="view-button" onclick="openModal(currentQueueNumber)">View</button>
+                            <button class="next-button"id="nextQueueButton" onclick="nextQueue()">Next</button>
+                        </div>
+                    </div>
+            
+                   
+                    <div class="queue-list">
+                        <h3 class="queue-list-title">Upcoming Numbers</h3>
+                        <div class="queue-rows" id="queueItems">
+                        
+                            <p class="empty-queue-message">No upcoming numbers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+
+    </section>
+
+
+ <div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="serviceModalLabel">Queue Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="queueDetails"></div>
+                <div id="formDetails"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Done</button>
+            </div>
+        </div>
+    </div>
+ </div>
+
+ <div id="modalOverlay" class="modal-overlay"></div>
+
+
+     
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/uu.js"></script>
+  <script src="../src/script.js"></script>
+  <script src="../js/myprofile.js"></script>
+  <script src="../js/avatar.js"></script>
+  <script src="../js/queue_list.js"></script>
+  <script src="../js/profdown.js"></script>
+
+</body>
+</html>

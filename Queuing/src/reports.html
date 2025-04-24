@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/sidebar.css">
+  <link rel="stylesheet" href="../css/reports.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/profi.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <title>admin</title>
+</head>
+<body>
+  <!-- SIDEBAR -->
+  <section id="sidebar">
+    <a href="#" class="brand">
+        <img src="../pictures/san.png" alt="Logo" class="brand-logo">
+        <div class="admin" id="username-display">Admin</div>
+      </a>
+
+     <ul class="side-menu top">
+        <li>
+            <a href="../src/dashboard.html">
+                <i class='bx bxs-dashboard'></i>
+                <span class="text">Dashboard</span>
+            </a>
+        </li>
+        <li>
+            <a href="../src/queuelist.html">
+                <i class='bx bx-list-check'></i>
+                <span class="text">Queue List</span>
+            </a>
+        </li>
+        <li>
+            <a href="../src/userlist.html">
+                <i class='bx bxs-user-detail'></i>
+                <span class="text">User List</span>
+            </a>
+        </li>
+        <li>
+            <a href="../src/history.html">
+                <i class='bx bx-history'></i>
+                <span class="text">History</span>
+            </a>
+        </li>
+        <li>
+          <a href="#">
+              <i class='bx bx-news'></i>
+              <span class="text">Announcement</span>
+          </a>
+      </li>
+      <li class="active">
+            <a href="../src/reports.html">
+                <i class='bx bx-bar-chart-alt'></i>
+                <span class="text">Reports</span>
+            </a>
+        </li>
+    </ul>
+
+    <ul class="side-menu">
+        <li>
+            <a href="../src/index.html" class="logout">
+                <i class='bx bxs-log-out-circle'></i>
+                <span class="text">Logout</span>
+            </a>
+        </li>
+    </ul>
+</section>
+  <!-- SIDEBAR -->
+
+  <section id="content">
+    <nav>
+      <i class='bx bx-menu'></i>
+      <div class="navbar-title">
+        Barangay San Jose Queuing System
+      </div>
+      <div class="user_profile">
+        <div class="avatar" id="sidebar-avatar" style="background-image: url('');"></div>
+        <div class="profile-dropdown">
+            <a href="#" class="my_profile">My Profile</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+      <div class="head-title">
+        <div class="left">
+          <h1>Reports</h1>
+        </div>
+      </div>
+
+      <p class="note">Note: Lahat ng nag request nung nakaraan at ngayon lang nakuha is included sa today's report.</p>
+
+        <div class="reports-container">
+            <div class="report-box">
+                <h3>Services Complete</h3>
+                <table class="report-table">
+                    <tr>
+                        <td>Barangay ID</td>
+                        <td id="barangay-id-complete">Loading...</td>
+                    </tr>
+                    <tr>
+                        <td>Barangay Indigency</td>
+                        <td id="barangay-indigency-complete">Loading...</td>
+                    </tr>
+                    <tr>
+                        <td>Barangay Certificate</td>
+                        <td id="barangay-certificate-complete">Loading...</td>
+                    </tr>
+                    <tr>
+                        <td>Barangay Clearance</td>
+                        <td id="barangay-clearance-complete">Loading...</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="highlight">
+                <h3>Users Today</h3>
+                <div class="user-count">
+                    <span>45</span>
+                </div>
+            </div>
+
+            <div class="report-box">
+                <h3>Services Pickup</h3>
+<table class="report-table">
+    <tr>
+        <td>Barangay ID</td>
+        <td id="barangay-id-total">Loading...</td>
+    </tr>
+    <tr>
+        <td>Barangay Indigency</td>
+        <td id="barangay-indigency-total">Loading...</td>
+    </tr>
+    <tr>
+        <td>Barangay Certificate</td>
+        <td id="barangay-certificate-total">Loading...</td>
+    </tr>
+    <tr>
+        <td>Barangay Clearance</td>
+        <td id="barangay-clearance-total">Loading...</td>
+    </tr>
+</table>
+
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-box">
+                <canvas id="serviceChart"></canvas>
+            </div>
+        </div>
+    </main>
+    <!-- CONTENT -->
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/uu.js"></script>
+  <script src="../js/reports.js"></script>
+  <script src="../js/myprofile.js"></script>
+  <script src="../js/avatar.js"></script>
+  <script src="../js/profdown.js"></script>
+</body>
+</html>

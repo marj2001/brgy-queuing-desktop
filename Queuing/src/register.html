@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Barangay San Jose Queuing System</title>
+    <link rel="stylesheet" href="../css/regis.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kreon:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="header-title">Barangay San Jose Queuing System</h1>
+        <div class="signup-form-container">
+            <h2>Sign Up as Admin</h2>
+            <form id="signup-form" action="#" method="POST">
+                <div class="row">
+                    <div class="column">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" required>
+                    </div>
+                    <div class="column">
+                        <div class="input-container">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" required>
+                            <span id="username-error-message">Username is already taken</span> <!-- Error message -->
+                        </div>
+                    </div>
+                </div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="position">Position</label>
+                <input type="text" id="position" name="position" required>
+                <div class="row">
+                    <div class="column">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="column">
+                        <label for="repeat-password">Repeat Password</label>
+                        <input type="password" id="repeat-password" name="repeat-password" required>
+                        <p id="repeat-password-message" class="error">X</p>
+                    </div>
+                </div>
+                <div class="show-password">
+                    <input type="checkbox" id="show-password">
+                    <label for="show-password">Show Password</label>
+                </div>
+                <div class="fingerprint-section">
+                    <label for="fingerprint">Fingerprint Scan</label>
+                    <button type="button" id="fingerprint-scan">Scan Fingerprint</button>
+                </div>
+                
+                
+                <button id="signup-button" type="submit">Sign Up</button>
+                <div class="login">
+                    <hr>
+                    <a href="index.html">Go To Log In</a>
+                </div>
+            </form>
+        </div>
+        <div id="messageModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="modal-message"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/register.js"></script>
+</body>
+</html>

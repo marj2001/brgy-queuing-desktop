@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barangay Queuing Queue List</title>
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/sidebar.css"> 
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/profi.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/userlist.css">
+
+ 
+</head>
+<body>
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+        <a href="#" class="brand">
+            <img src="../pictures/san.png" alt="Logo" class="brand-logo">
+            <div class="admin" id="username-display">Admin</div>
+        </a>
+        <ul class="side-menu top">
+            <li>
+                <a href="dashboard.html">
+                    <i class='bx bxs-dashboard'></i>
+                    <span class="text">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="queuelist.html">
+                    <i class='bx bx-list-check'></i>
+                    <span class="text">Queue List</span>
+                </a>
+            </li>
+            
+            <li class="active">
+                <a href="../src/userlist.html">
+                    <i class='bx bxs-user-detail'></i>
+                    <span class="text">User List</span>
+                </a>
+            </li>
+            <li>
+                <a href="../src/history.html">
+                    <i class='bx bx-history'></i>
+                    <span class="text">History</span>
+                </a>
+            </li>
+            <li>
+                <a href="../src/announce.html">
+                    <i class='bx bx-news'></i>
+                    <span class="text">Announcement</span>
+                </a>
+            </li>
+            <li>
+                <a href="../src/reports.html">
+                    <i class='bx bx-bar-chart-alt'></i>
+                    <span class="text">Reports</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="side-menu">
+            <li>
+                <a href="../src/index.html" class="logout">
+                    <i class='bx bxs-log-out-circle'></i>
+                    <span class="text">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+        <nav>
+            <i class='bx bx-menu'></i>
+
+            <div class="navbar-title">
+                Barangay San Jose Queuing System
+             </div>
+
+            <div class="user_profile">
+                <div class="avatar" id="sidebar-avatar" style="background-image: url('');"></div>
+                <div class="profile-dropdown">
+                    <a href="../src/myprofile.html" class="my_profile">My Profile</a>
+                </div>
+              </div>
+        </nav>
+
+        
+        <main>
+            <div class="head-title">
+                <div class="left">
+                    <h1>User List</h1>
+                </div>
+            </div>
+
+            <div class="userlist-wrapper">
+                <!-- Search and Controls -->
+                <div class="userlist-controls">
+                    <input ty  pe="text" id="searchUser" placeholder="Search user..." onkeyup="filterUsers()">
+                </div>
+
+                <div class="userlist-content">
+                    <div class="userlist-box">
+                        <div class="userlist-row-header">
+                            <div class="userlist-label">Name</div>
+                            <div class="userlist-label1">Username</div>
+                            <div class="userlist-label0">Email</div>
+                            <div class="userlist-label2">Actions</div>
+                        </div>
+                        <div id="userTableBody" class="scrollable-userlist">
+                            <div class="userlist-row">
+                                <div class="userlist-item">Roselyn S. Hernandez</div>
+                                <div class="userlist-item">rhernandez</div>
+                                <div class="userlist-item">roselyn@example.com</div>
+                                <div class="userlist-item">
+                                    <button class="edit-button"><i class="fas fa-edit"></i> Edit</button>
+                                    <button class="view-button"><i class="fas fa-eye"></i> View</button>
+                                </div>
+                            </div>
+                            <!-- Add more rows as needed -->
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+           
+        </main>
+        <!-- MAIN CONTENT -->
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/uu.js"></script>
+  <script src="../src/script.js"></script>
+  <script src="../js/myprofile.js"></script>
+  <script src="../js/avatar.js"></script>
+  <script src="../js/profdown.js"></script>
+  <script src="../js/userlist.js"></script>
+</body>
+</html>

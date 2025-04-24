@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../css/main.css">
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h1>Barangay San Jose</h1>
+            <h1>Queuing System</h1>
+        </div>
+        <div class="right">
+            <div class="login-form">
+                <h1>Log In as Admin</h1>
+                <div class="input-group">
+                    <label for="user-info" class="icon-label">
+                        <img src="../pictures/user.png" alt="Username Icon">
+                    </label>
+                    <input type="text" id="user-info" placeholder="Username or Phone Number">
+                </div>
+                <div class="input-group password-group">  
+                    <label for="password" class="icon-label">
+                        <img src="../pictures/ps.png" alt="Password Icon">
+                    </label>
+                    <input type="password" id="password" placeholder="Password">
+                </div>
+                <div class="show-password-checkbox">
+                    <input type="checkbox" id="show-password" class="checkbox">
+                    <label for="show-password">Show Password</label>
+                </div>
+                <div id="message-box" style="display: none; color: red; margin-top: 5px;">Enter your password, please.</div>
+                <div class="fingerprint-group">
+                    <label for="fingerprint" class="fingerprint-label">
+                        <img src="../pictures/fp.png" alt="Fingerprint Icon">
+                    </label>
+                    <input type="checkbox" id="fingerprint" class="fingerprint-checkbox">
+                    <input type="hidden" id="fingerprint-data">
+                </div>
+                
+                
+                    <button id="login-button">Log In</button>
+                
+                
+                <div class="admin-login">
+                    <hr>
+                    <a href="register.html">Register as Admin</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
